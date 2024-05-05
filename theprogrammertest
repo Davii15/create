@@ -1,8 +1,9 @@
 <?php
-$session_id = $_POST["session_id"];
-$service_code = $_POST["service_code"];
-$phonenumber = $_POST["phonenumber"];
-$test  = $_POST["test"];
+// Check if the keys exist in the $_POST array before accessing them
+$session_id = isset($_POST["session_id"]) ? $_POST["session_id"] : "";
+$service_code = isset($_POST["service_code"]) ? $_POST["service_code"] : "";
+$phonenumber = isset($_POST["phonenumber"]) ? $_POST["phonenumber"] : "";
+$test  = isset($_POST["test"]) ? $_POST["test"] : "";
 $response = ""; // Initialize $response variable
 
 if ($test == " ") {
